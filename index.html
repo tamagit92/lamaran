@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Resume - Yosi Nanda Kurniawan</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 16px;
+      }
+
+      .halaman {
+        width: 794px;
+        height: 1123px;
+        background-color: grey;
+        margin: auto;
+        padding: 1px;
+        margin-bottom: 30px;
+      }
+
+      .konten {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+
+      .form {
+        width: 794px;
+        background-color: grey;
+        margin: auto;
+        padding: 1px;
+        margin-bottom: 30px;
+      }
+
+      input {
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+      }
+
+      @media print {
+        #hilang {
+          display: none;
+        }
+
+        header, footer, nav, aside, .title, .page-title, .breadcrumb, .btn-print {
+            display: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="width: 100%; padding-top: 30px; padding-bottom: 30px">
+
+      <div id="hilang">
+        <div class="form" style="display: flex; flex-direction: column">
+          <div
+            class="konten"
+            style="
+              padding: 30px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+            "
+          >
+            <h3>Isi data ini dulu bre terus klik cetak !</h3>
+            <br />
+            <input type="text" id="tanggal" placeholder="isi tanggal" />
+            <input type="text" id="namapt" placeholder="isi nama PT" />
+            <input type="text" id="alamat1" placeholder="isi alamat PT" />
+            <input
+              type="text"
+              id="alamat2"
+              placeholder="isi kelurahan, kecamatan, kota PT"
+            />
+
+            <div class="tombol">
+              <button
+                onclick="cetakElemen()"
+                style="
+                  width: 100px;
+                  height: 30px;
+                  background-color: rgb(3, 190, 252);
+                  cursor: pointer;
+                  color: white;
+                  border-radius: 20px;
+                  font-size: 16px;
+                  border: none;
+                "
+              >
+                Cetak
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="halaman" class="halaman">
+        <div class="konten" style="padding: 30px">
+          <div
+            class="tanggal"
+            style="display: flex; justify-content: end; margin-bottom: 30px"
+          >
+            <p id="tanggal-surat"></p>
+          </div>
+
+          <div class="perusahaan" style="margin-bottom: 30px">
+            <p>Yth. Bapak/Ibu Personalia</p>
+            <p id="namapt-surat" style="font-weight: 800"></p>
+            <p id="alamat1-surat"></p>
+            <p id="alamat2-surat"></p>
+          </div>
+
+          <div class="salam">
+            <p>Dengan hormat,</p>
+            <p>Saya yang bertanda tangan di bawah ini :</p>
+          </div>
+
+          <div
+            class="biodata"
+            style="
+              display: flex;
+              gap: 10px;
+              margin-top: 15px;
+              padding-left: 30px;
+              margin-bottom: 30px;
+            "
+          >
+            <div class="soal" style="width: 180px">
+              <p>Nama</p>
+              <p>Jenis kelamin</p>
+              <p>Tempat, tanggal lahir</p>
+              <p>Pendidikan terakhir</p>
+              <p>Alamat</p>
+              <p>Nomor HP</p>
+              <p>Email</p>
+            </div>
+            <div class="titikdua">
+              <p>:</p>
+              <p>:</p>
+              <p>:</p>
+              <p>:</p>
+              <p>:</p>
+              <p>:</p>
+              <p>:</p>
+            </div>
+            <div class="data">
+              <p>Yosi Nanda Kurniawan</p>
+              <p>Laki-laki</p>
+              <p>Jakarta, 31 Mei 1994</p>
+              <p>S1 - Sastra dan Bahasa Indonesia</p>
+              <p>
+                Jl. Tipar Tengah Rt.06/Rw.10, Mekarsari, Cimanggis, Kota Depok
+              </p>
+              <p>0817 7656 1594</p>
+              <p>yosinandakurniawan94@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="epilog">
+            <p style="text-align: justify">
+              Bermaksud ingin melamar sebagai karyawan di
+              <span id="namapt-surat1"></span> pada posisi Staff Warehouse
+              sesuai dengan lowongan pekerjaan yang sedang Bapak/Ibu tawarkan
+              saat ini. Saya telah memiliki pengalaman di bagian warehouse lebih
+              dari 6 tahun. Dari pengalaman tersebut, saya mengajukan surat
+              lamaran pekerjaan ini beserta lampiran dokumen sebagai bahan
+              pertimbangan, di antaranya :
+            </p>
+          </div>
+
+          <div
+            class="biodata"
+            style="
+              display: flex;
+              gap: 5px;
+              margin-top: 15px;
+              padding-left: 30px;
+              margin-bottom: 30px;
+            "
+          >
+            <div class="soal" style="width: 5px">
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+              <p>4</p>
+              <p>5</p>
+              <p>6</p>
+              <p>7</p>
+              <p>8</p>
+            </div>
+            <div class="titikdua">
+              <p>.</p>
+              <p>.</p>
+              <p>.</p>
+              <p>.</p>
+              <p>.</p>
+              <p>.</p>
+              <p>.</p>
+              <p>.</p>
+            </div>
+            <div class="data">
+              <p>Daftar Riwayat Hidup</p>
+              <p>KTP</p>
+              <p>Ijazah S1</p>
+              <p>Transkip Nilai</p>
+              <p>Paklaring PT. Joenoes Ika Mulya</p>
+              <p>Paklaring PT. Herlina Indah</p>
+              <p>Paklaring PT. Kreasi Boga Pratama</p>
+              <p>Paklaring PT. Sinergi Global Servis</p>
+            </div>
+          </div>
+
+          <div class="penutup" style="margin-bottom: 30px">
+            <p style="text-align: justify">
+              Demikian surat lamaran ini saya buat dengan sebenar-benarnya,
+              semoga Bapak/Ibu pimpinan dapat memberikan kesempatan kepada saya
+              untuk berkontribusi dan mencapai tujuan dari
+              <span id="namapt-surat2"></span>. Atas perhatian dan kerja samanya
+              saya ucapkan terima kasih.
+            </p>
+          </div>
+
+          <div class="tandatangan" style="display: flex; justify-content: end">
+            <div class="ttd" style="text-align: center">
+              <p>Hormat saya,</p>
+              <img src="ttd.png" alt="" width="100px" />
+              <p>Yosi Nanda Kurniawan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="halaman" class="halaman">
+        <div class="konten">
+          <img src="cv.jpg" alt="" width="100%" />
+        </div>
+      </div>
+      <div id="halaman" class="halaman">
+        <div class="konten">
+          <img src="ktp.jpg" alt="" width="100%" />
+        </div>
+      </div>
+      <div id="halaman" class="halaman">
+        <div class="konten">
+          <img src="ijazah.jpg" alt="" width="100%" />
+        </div>
+      </div>
+      <div id="halaman" class="halaman">
+        <div class="konten">
+          <img src="transkip.jpg" alt="" width="100%" />
+        </div>
+      </div>
+      <div id="halaman" class="halaman">
+        <div class="konten">
+          <img src="paklaring1.jpg" alt="" width="100%" />
+        </div>
+      </div>
+      <div id="halaman" class="halaman">
+        <div class="konten">
+          <img src="paklaring2.jpg" alt="" width="100%" />
+        </div>
+      </div>
+      <div id="halaman" class="halaman">
+        <div class="konten">
+          <img src="paklaring3.jpg" alt="" width="100%" />
+        </div>
+      </div>
+      <div id="halaman" class="halaman" style="margin-bottom: 0px;">
+        <div class="konten">
+          <img src="paklaring4.jpg" alt="" width="100%" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Tambahkan event listener untuk mendengarkan perubahan pada input
+      document
+        .getElementById("tanggal")
+        .addEventListener("input", updateDataSiswa);
+      document
+        .getElementById("namapt")
+        .addEventListener("input", updateDataSiswa);
+      document
+        .getElementById("alamat1")
+        .addEventListener("input", updateDataSiswa);
+      document
+        .getElementById("alamat2")
+        .addEventListener("input", updateDataSiswa);
+
+      function updateDataSiswa() {
+        // Dapatkan nilai dari input
+        var tanggal = document.getElementById("tanggal").value;
+        var namapt = document.getElementById("namapt").value;
+        var alamat1 = document.getElementById("alamat1").value;
+        var alamat2 = document.getElementById("alamat2").value;
+
+        // Perbarui tampilan Data Siswa dengan nilai yang baru
+        document.getElementById("tanggal-surat").innerText = tanggal;
+        document.getElementById("namapt-surat").innerText = namapt;
+        document.getElementById("namapt-surat1").innerText = namapt;
+        document.getElementById("namapt-surat2").innerText = namapt;
+        document.getElementById("alamat1-surat").innerText = alamat1;
+        document.getElementById("alamat2-surat").innerText = alamat2;
+      }
+
+      function cetakElemen() {
+        var elemenHalaman = document.getElementById("halaman");
+        window.print(elemenHalaman);
+      }
+    </script>
+  </body>
+</html>
